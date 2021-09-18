@@ -1,9 +1,13 @@
 import React from 'react';
+import TopBar from 'components/TopBar';
+import * as S from './styles';
 
-// import { Container } from './styles';
+const Home: React.FC = () => (
+  <S.Container>
+    <TopBar/>
+    <S.Content>a</S.Content>
+  </S.Container>
+)
 
-const Home: React.FC = () => {
-  return <div />;
-}
 
 export default Home;
