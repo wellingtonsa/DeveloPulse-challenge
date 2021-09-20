@@ -1,7 +1,12 @@
 const states = ["AB", "BC", "MB", "NB", "NL", "NT", "NU", "ON", "PE", "SK", "QC", "YT"];
 
+const regex = {
+    EMAIL:  /^(([^<>()[\]\\.,;:\s@\\"]+(\.[^<>()[\]\\.,;:\s@\\"]+)*)|(\\".+\\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+}
+
 const consts = {
-    states
+    states,
+    regex
 }
 
 export default consts;

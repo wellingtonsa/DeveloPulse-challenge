@@ -1,6 +1,9 @@
 import Logo from 'assets/images/developulse-logo.png';
 import ImageBackground from 'assets/images/image-background.jpg';
 
+import Success from 'assets/icons/success.svg';
+import Error from 'assets/icons/error.svg';
+
 enum RoutesPath {
     HOME = '/',
 }
@@ -10,7 +13,9 @@ const ImagesPath = {
     IMAGE_BACKGROUND: ImageBackground
 }
 
-enum IconsPath {
+const IconsPath = {
+    success: Success,
+    error: Error
 }
 
 const path = {
