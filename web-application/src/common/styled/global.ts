@@ -15,7 +15,7 @@ export default createGlobalStyle`
     }
     body {
         font-size: 14px;
-        front-family: "Lato", Helvetica, sans-serif;
+        font-family: "Lato", Helvetica, sans-serif;
         background: #FFF;
         -webkit-font-smoothing: antialiased !important;
     }
