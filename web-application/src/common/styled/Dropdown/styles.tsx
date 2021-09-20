@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Input = styled.input`
+export const Container = styled.datalist`
     width: 100%;
     height: 38px;
     outline: 0;
@@ -21,5 +21,3 @@ const Input = styled.input`
         color: #a1a1a1;     
     }
 `;
-
-export default Input;

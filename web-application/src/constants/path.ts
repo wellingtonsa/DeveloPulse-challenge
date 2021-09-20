@@ -13,8 +13,10 @@ const ImagesPath = {
 enum IconsPath {
 }
 
-export const path = {
+const path = {
     routes:RoutesPath,
     images: ImagesPath,
     icons: IconsPath
 }
+
+export default path;

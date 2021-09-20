@@ -14,8 +14,8 @@ export const Content = styled.div`
     flex-direction: column;
     margin-top: 80px;
     width: 100%;
-    height: 639px;
-    max-width: 800px;
+    height:min-content;
+    max-width: 700px;
     background: #FFF;
     padding: 40px;
 
@@ -25,6 +25,7 @@ export const Content = styled.div`
         align-items: center;
         width: 100%;
         height: 60px;
+        margin-bottom: 30px;
 
         h1 {
             font-style: normal;

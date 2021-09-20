@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { path } from 'constants/path';
+import path from 'constants/path';
 
 export const Container = styled.div`
     display: flex;

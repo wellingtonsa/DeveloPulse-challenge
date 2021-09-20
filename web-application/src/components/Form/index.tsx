@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect }from 'react';
+import constants from 'constants/index';
 import Input from 'common/styled/Input';
+import Dropdown from 'common/styled/Dropdown';
 import Button from 'common/styled/Button';
+import { getCitiesByState } from 'services/location.services';
 import * as S from './styles';
 
-const Form: React.FC = () => (
+const Form: React.FC = () => {
+    const [cities, setCities] = useState([]);
+    const [state, setState] = useState('');
+    const [city, setCity] = useState('');
+
+    useEffect(() => {
+        if(state){
+            getCitiesByState(state)
+            .then(res => {
+                setCities(res);
+                setCity('');
+
+            })
+        }
+    }, [state]);
+
+    return (
      <S.Container>
          <S.Content>
             <div className="form-header">
@@ -21,9 +40,18 @@ const Form: React.FC = () => (
                 <Input placeholder="Unit/Apt"/>
                 </div>
                 <div className="form-content-fields">
-                <Input placeholder="Province/Territory/State"/>
-                <Input placeholder="City"/>
-                </div>                
+                <Dropdown 
+                placeholder="Province/Territory/State" 
+                data={constants.states} 
+                type="state"
+                onChange={setState} 
+                value={state}/>
+                <Dropdown 
+                placeholder="City" 
+                data={cities} 
+                type="city"
+                onChange={setCity} value={city}/>    
+                </div>      
                 <div className="form-content-fields">
                 <Input placeholder="E-mail"/>
                 </div>
@@ -32,5 +60,6 @@ const Form: React.FC = () => (
          </S.Content>
      </S.Container> 
   )
+    }
 
 export default Form;

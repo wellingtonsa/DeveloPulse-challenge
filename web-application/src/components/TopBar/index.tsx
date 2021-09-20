@@ -1,5 +1,5 @@
 import React from 'react';
-import { path } from 'constants/path';
+import path from 'constants/path';
 import * as S from './styles';
 
 
