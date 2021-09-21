@@ -51,7 +51,7 @@ export function validate(data:IForm): INotification {
         }
 
         if(state.length > 32){
-            throw('City has a max of 32 characters.');
+            throw('Province has a max of 32 characters.');
         }
 
 

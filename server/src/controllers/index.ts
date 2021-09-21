@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { sendForm } from '../services/form.services';
+import { sendForm, ApiFormResponse} from '../services/form.services';
 import { IForm } from '../util/types';
 import { regex } from '../util/constants';
 
@@ -42,9 +42,15 @@ class Controller {
             res.status(403).json({type: 'error', message:'Province has a max of 32 characters.'});
         }
 
-        const response = await sendForm(body);
+        const response:ApiFormResponse = await sendForm(body);
 
-        return res.status(200).json(response);
+        if(response.StatusCode === 200){
+            return res.status(200).json({type: 'success', message: 'Your information has been sent successfully.'});
+        }else{
+            return res.status(response.StatusCode).json({type: 'error', message: response.Status});
+        }
+
+        
     }
 }
 

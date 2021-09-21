@@ -5,9 +5,9 @@ import Dropdown from 'common/styled/Dropdown';
 import Button from 'common/styled/Button';
 import Notification, { INotification } from 'components/Notification';
 import { getCitiesByState } from 'services/location.services';
+import { submitForm } from 'services/form.services';
 import { validate, IForm } from './index.validate';
 import * as S from './styles';
-
 
 const Form: React.FC = () => {
     const [cities, setCities] = useState([]);
@@ -42,8 +42,16 @@ const Form: React.FC = () => {
             city,
             email
         }
-        const res = validate(data);
-        setNotification(res);
+
+        const response = validate(data);
+
+        if(response.type === "success"){
+            submitForm(data)
+            .then(res => setNotification(res));
+        }else {
+            setNotification(response);
+        }
+        
     }
 
     return (
