@@ -1,4 +1,4 @@
-It's a challenge created ny DeveloPulse which has the main proposal of measure the candidate's technical knowledges around of JS frameworks such as ReactJS and NodeJS.
+It's a challenge created by DeveloPulse which has the main proposal of measure the candidate's technical knowledges around of JS frameworks such as ReactJS and NodeJS.
 
 This challenge contains an implementation of a `Contact Us` webpage, where the user can fill its information in order to contact the DeveloPulse support.
 
