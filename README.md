@@ -11,12 +11,12 @@ To access and run the project, you need to follow these steps:
 ```
 git clone https://github.com/wellingtonsa/DeveloPulse-challenge.git
 ```
-**Execute the following commands to install all dependencies/libraries**
+**Execute the following commands in order to install all dependencies/libraries**
 
 #### Backend
 
 ```
-cd project/server
+cd server
 
 npm install // or yarn install
 ```
@@ -24,7 +24,7 @@ npm install // or yarn install
 #### Frontend
 
 ```
-cd project/web-application
+cd web-application
 
 npm install // or yarn install
 ```
