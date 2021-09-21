@@ -47,11 +47,24 @@ const Form: React.FC = () => {
 
         if(response.type === "success"){
             submitForm(data)
-            .then(res => setNotification(res));
+            .then(res => {
+                setNotification(res);
+                handleClearAllFields();
+            });
         }else {
             setNotification(response);
         }
         
+    }
+
+    const handleClearAllFields = () => {
+        setFirstName('');
+        setLastName('');
+        setStreet('');
+        setApt('');
+        setState('');
+        setCity('');
+        setEmail('');
     }
 
     return (

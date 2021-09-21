@@ -11,7 +11,7 @@ interface Props {
     onChange: (value:string) => void
 }
 
-function Dropdown({ data, type, placeholder, value, onChange }:Props): React.ReactElement {
+function Dropdown({ data = [], type, placeholder, value, onChange }:Props): React.ReactElement {
     return (
         <>
         <Input value={value} onChange={(e) => { onChange(e.target.value) }}  onFocus={() => onChange('')} placeholder={placeholder} list={`list-${type}`} name={type} id={type}/>
